@@ -1,4 +1,5 @@
 User.delete_all
+Video.delete_all
 
 # user = User.new
 # user.password = "1234"
@@ -20,3 +21,10 @@ ez = User.new(
   statement:             "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defense, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America."
 )
 ez.save
+
+
+timber = Video.create(
+  title: "Timber",
+  youtube_id: "hHUbLv4ThOo",
+)
+puts timber.errors.full_messages
