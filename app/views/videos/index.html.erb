@@ -1,7 +1,7 @@
 <header>
 
 <h1>Mr. WorldWide TV</h1>
-<h2>Dale</h2>
+<h2>Dale!</h2>
 
 <nav>
   <ul>
@@ -11,11 +11,16 @@
 </header>
 
 <main>
-  <%= forms_tag  do %>
+  <%= form_tag  do %>
 
   <%end%>
 
   <ul class="video">
-    <li>I'm a video</li>
+    <% @videos.each do |video| %>
+      <li>
+        <strong> <%= video.title %></strong><br>
+         <iframe width="560" height="315" src="<%= video.embed_url %>" frameborder="0" allowfullscreen></iframe>
+      </li>
+    <%end%>
   </ul>
 </main>
